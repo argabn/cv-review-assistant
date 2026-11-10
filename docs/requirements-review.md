@@ -2,7 +2,7 @@
 
 ## Hasil pemeriksaan
 
-Paket memenuhi keluaran teknis yang diminta dalam SK_Batch2_AI_Engineer.pdf: architecture note, prototype yang berjalan, schema, rekomendasi bercaveat, sample input/output, serta evaluasi sederhana. Brief mengizinkan mock dan tidak mewajibkan aplikasi ATS lengkap, UI unggah, deployment, multi-agent, atau OCR. Implementasi adalah prototype lokal untuk demonstrasi alur, bukan produk produksi yang sudah tersertifikasi.
+Paket menyediakan keluaran teknis yang diminta dalam SK_Batch2_AI_Engineer.pdf: architecture note, prototype yang berjalan, schema, rekomendasi bercaveat, sample input/output, serta evaluasi sederhana. Brief mengizinkan mock dan tidak mewajibkan aplikasi ATS lengkap, UI unggah, deployment, multi-agent, atau OCR. Implementasi adalah prototype lokal untuk demonstrasi alur, bukan produk produksi yang sudah tersertifikasi. Contoh yang disertakan bersifat sintetis; asal dataset eksternal untuk pengujian tambahan dijelaskan di bawah.
 
 | Kebutuhan brief | Artefak/bukti | Status |
 |---|---|---|
@@ -12,16 +12,35 @@ Paket memenuhi keluaran teknis yang diminta dalam SK_Batch2_AI_Engineer.pdf: arc
 | Recommendation dengan caveat | pipeline.py, recommendation.status/rationale/caveats/follow_up_questions | Tersedia |
 | Tidak membuat keputusan otomatis | human_review_required=true; final_decision=null | Diuji |
 | Prototype/pseudocode/mock bekerja | python -m cvflow demo; output/demo | Diuji |
-| Sample input/output | samples/cv.txt, output/demo/results.json | Tersedia, sintetis |
-| Evaluasi sederhana | output/evaluation/REPORT.md, metrics.json, tests | Diuji; mock dibedakan dari LLM |
+| Sample input/output | [Input](../samples/cv.txt), [output](../examples/demo/results.json) | Tersedia, sintetis |
+| Evaluasi sederhana | [Laporan](../examples/evaluation/REPORT.md), [metrik](../examples/evaluation/metrics.json), tests | Diuji; mock dibedakan dari LLM |
 | Architecture note | architecture.md | Tersedia |
-| Catatan AI/tools | AI_USAGE.md | Tersedia |
+| Catatan AI/tools | [AI dan tools](ai-usage.md) | Tersedia |
 | Tidak membeli API/tool | Demo tanpa model/API; Ollama opsional dan lokal | Dipenuhi dalam pengerjaan |
-| Tidak memakai data pribadi/confidential dalam hasil | Paket hanya contoh sintetis; arsip CV pengguna tidak disertakan | Isi ZIP diperiksa |
-| Nama file sesuai format | Arga_Bona_Simarmata_AIEngineer_SKBatch2.zip | Sesuai |
-| Repo/notebook/Docs | Paket direktori kode + Markdown untuk repo | Siap diunggah ke repo/Drive |
-| Anyone with link can view, link bisa diakses | Membutuhkan hosting/unggahan eksternal | Belum dibuat atau diuji |
+| Tidak menggunakan data pribadi/confidential nyata | Contoh dalam paket sintetis; pengujian tambahan menggunakan dataset contoh CV publik Kaggle | Tidak ada dokumen dataset eksternal dalam paket; status seluruh dataset sebagai sintetis belum terverifikasi |
+| Nama file sesuai format | Arga_Bona_Simarmata_AIEngineer_SKBatch2.zip | Nama paket pengumpulan; kode sumber juga tersedia di repo |
+| Repo/notebook/Docs | [Repository](https://github.com/argabn/cv-review-assistant) berisi kode dan Markdown | Sudah dipublikasikan |
+| Anyone with link can view, link bisa diakses | Repository GitHub publik | Visibilitas publik diverifikasi pada 10 November 2026 |
 | Identitas, email, deadline, submit form | Catatan privat di luar paket | Tindakan pengumpulan masih pada pemilik |
+
+## Sumber data pengujian
+
+Arsip untuk pengujian tambahan diidentifikasi oleh pengguna sebagai
+[Resume Dataset oleh Snehaan Bhawal di Kaggle](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset).
+Deskripsi penerbit menyebut kumpulan contoh CV yang diambil dari LiveCareer;
+metadata Kaggle menandai dataset sebagai publik dengan lisensi CC0. Deskripsi
+tersebut tidak menyatakan seluruh dokumen sintetis atau menjamin anonimisasi
+lengkap. Karena itu, dataset disebut contoh CV publik, bukan CV privat pengguna
+atau dataset sintetis yang sudah terverifikasi. Metadata sumber diperiksa pada
+10 November 2026; kecocokan seluruh arsip lokal dengan versi Kaggle tidak diaudit.
+
+Paket publik hanya menyediakan input, fixture, dan output sintetis. Dokumen
+Kaggle, teks ekstraksi, dan respons model dari pengujian dataset eksternal tidak
+disertakan. Ringkasan agregat pengujian tambahan tetap dijelaskan
+di [verification.md](verification.md). Demonstrasi dan evaluasi yang dapat
+direproduksi untuk pengumpulan menggunakan data sintetis. Tidak ada pengujian
+ulang dataset eksternal dalam audit pengumpulan ini. Sumber publik saja tidak
+cukup untuk memastikan ketiadaan informasi pribadi di setiap dokumen.
 
 ## Antarmuka dan pola industri
 
