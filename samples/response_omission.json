@@ -1,0 +1,32 @@
+{
+  "skills": [
+    {
+      "name": "Python",
+      "quote": "Skills: Python, SQL."
+    }
+  ],
+  "education": [
+    {
+      "degree": "S1",
+      "field": "Informatika",
+      "institution": "Universitas Contoh",
+      "quote": "Pendidikan: S1 Informatika, Universitas Contoh."
+    }
+  ],
+  "experience": [
+    {
+      "role": "Developer",
+      "organization": "Perusahaan Contoh",
+      "period_raw": "2023-2024",
+      "description": null,
+      "quote": "Pengalaman: Developer di Perusahaan Contoh, 2023-2024."
+    }
+  ],
+  "projects": [
+    {
+      "name": "FAQ Assistant",
+      "description": "menggunakan API LLM",
+      "quote": "Proyek: FAQ Assistant menggunakan API LLM."
+    }
+  ]
+}

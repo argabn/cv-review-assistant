@@ -1,0 +1,42 @@
+name: Tests
+on:
+  push:
+    branches: [main, feature/initial-release]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    name: Python ${{ matrix.python }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Python tests
+        run: python -m unittest discover -s tests -v
+      - name: Review form tests
+        run: node tests/test_review_form.cjs
+      - name: Reproducible demo and evaluation
+        run: python -m cvflow demo
+      - name: Validate human correction workflow
+        run: >-
+          python -m cvflow review
+          --results output/review-before/results.json
+          --receipt samples/review.json
+          --source samples/cv.txt
+          --job samples/job.json
+          --out output/ci-reviewed

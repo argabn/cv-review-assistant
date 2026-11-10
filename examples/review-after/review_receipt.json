@@ -1,0 +1,158 @@
+{
+  "original_sha256": "ab04322aef9768c384c01147c1f11fa5a2795fd6ed9f9896e80710f23e66f1c9",
+  "reviewed_at_utc": "2026-11-10T03:05:41.425751+00:00",
+  "review": {
+    "reviewer": "Reviewer Demo (simulasi)",
+    "candidate_id": "C-0001",
+    "action": "reviewed",
+    "notes": "Simulasi review: SQL tercantum dalam CV tetapi terlewat pada respons. Tambahkan kembali dengan kutipan sumber.",
+    "corrected_facts": {
+      "skills": [
+        {
+          "name": "Python",
+          "quote": "Skills: Python, SQL."
+        },
+        {
+          "name": "SQL",
+          "quote": "Skills: Python, SQL."
+        }
+      ],
+      "education": [
+        {
+          "degree": "S1",
+          "field": "Informatika",
+          "institution": "Universitas Contoh",
+          "quote": "Pendidikan: S1 Informatika, Universitas Contoh."
+        }
+      ],
+      "experience": [
+        {
+          "role": "Developer",
+          "organization": "Perusahaan Contoh",
+          "period_raw": "2023-2024",
+          "description": null,
+          "quote": "Pengalaman: Developer di Perusahaan Contoh, 2023-2024."
+        }
+      ],
+      "projects": [
+        {
+          "name": "FAQ Assistant",
+          "description": "menggunakan API LLM",
+          "quote": "Proyek: FAQ Assistant menggunakan API LLM."
+        }
+      ]
+    }
+  },
+  "result": {
+    "schema_version": "1.0",
+    "candidate_id": "C-0001",
+    "source": "cv.txt",
+    "processing_status": "success",
+    "facts": {
+      "skills": [
+        {
+          "name": "Python",
+          "quote": "Skills: Python, SQL."
+        },
+        {
+          "name": "SQL",
+          "quote": "Skills: Python, SQL."
+        }
+      ],
+      "education": [
+        {
+          "degree": "S1",
+          "field": "Informatika",
+          "institution": "Universitas Contoh",
+          "quote": "Pendidikan: S1 Informatika, Universitas Contoh."
+        }
+      ],
+      "experience": [
+        {
+          "role": "Developer",
+          "organization": "Perusahaan Contoh",
+          "period_raw": "2023-2024",
+          "description": null,
+          "quote": "Pengalaman: Developer di Perusahaan Contoh, 2023-2024."
+        }
+      ],
+      "projects": [
+        {
+          "name": "FAQ Assistant",
+          "description": "menggunakan API LLM",
+          "quote": "Proyek: FAQ Assistant menggunakan API LLM."
+        }
+      ]
+    },
+    "assessment": [
+      {
+        "criterion_id": "C1",
+        "label": "Python",
+        "required": true,
+        "status": "supported",
+        "evidence": [
+          "Skills: Python, SQL."
+        ],
+        "explanation": "Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi."
+      },
+      {
+        "criterion_id": "C2",
+        "label": "SQL",
+        "required": true,
+        "status": "supported",
+        "evidence": [
+          "Skills: Python, SQL."
+        ],
+        "explanation": "Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi."
+      },
+      {
+        "criterion_id": "C3",
+        "label": "Proyek integrasi API LLM",
+        "required": true,
+        "status": "supported",
+        "evidence": [
+          "Proyek: FAQ Assistant menggunakan API LLM."
+        ],
+        "explanation": "Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi."
+      },
+      {
+        "criterion_id": "C4",
+        "label": "Pendidikan Informatika (tambahan)",
+        "required": false,
+        "status": "supported",
+        "evidence": [
+          "Pendidikan: S1 Informatika, Universitas Contoh."
+        ],
+        "explanation": "Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi."
+      }
+    ],
+    "human_review_required": true,
+    "final_decision": null,
+    "errors": [],
+    "metadata": {
+      "author": "Arga Bona Simarmata",
+      "mode": "human_corrected",
+      "model": null,
+      "job_title": "Junior AI Engineer — posisi sintetis",
+      "job_version": "1.0",
+      "source_sha256": "cae1d31d91e3d74e70c4892dca8139c2742e9102e885d09ccd6a952c3dc8b732",
+      "job_sha256": "cb82322bad4e4b11ee5508087778c958c2cf4b768ea50daee6aeda9fc1328deb",
+      "elapsed_seconds": 0.003
+    },
+    "recommendation": {
+      "status": "ready_for_review",
+      "summary": "Terdapat 2 skill, 1 pendidikan, 1 pengalaman, dan 1 proyek yang diekstrak. 4/4 kriteria memiliki bukti tertulis.",
+      "rationale": "Untuk posisi Junior AI Engineer — posisi sintetis, seluruh kriteria wajib memiliki bukti awal untuk ditinjau manusia.",
+      "caveats": [
+        "Isi CV adalah klaim, belum verifikasi kompetensi.",
+        "Informasi tidak ditemukan dapat disebabkan data tidak dicantumkan atau ekstraksi terlewat.",
+        "Pemeriksaan kutipan tidak membuktikan semua hubungan antarfield benar. Reviewer harus membandingkan sumber.",
+        "Deteksi manipulasi bersifat terbatas; hidden text PDF dan proxy bias belum diaudit."
+      ],
+      "follow_up_questions": [
+        "Verifikasi kontribusi pribadi dan kualitas hasil melalui wawancara atau demonstrasi."
+      ]
+    }
+  },
+  "notice": "Catatan review manusia; bukan keputusan hiring otomatis. Identitas reviewer belum diautentikasi pada prototype lokal."
+}

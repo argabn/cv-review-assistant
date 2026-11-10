@@ -1,0 +1,153 @@
+{
+  "author": "Arga Bona Simarmata",
+  "job": {
+    "title": "Junior AI Engineer — posisi sintetis",
+    "version": "1.0",
+    "criteria": [
+      {
+        "id": "C1",
+        "label": "Python",
+        "field": "skills",
+        "any_of": [
+          "Python"
+        ],
+        "required": true
+      },
+      {
+        "id": "C2",
+        "label": "SQL",
+        "field": "skills",
+        "any_of": [
+          "SQL"
+        ],
+        "required": true
+      },
+      {
+        "id": "C3",
+        "label": "Proyek integrasi API LLM",
+        "field": "projects",
+        "any_of": [
+          "API LLM"
+        ],
+        "required": true
+      },
+      {
+        "id": "C4",
+        "label": "Pendidikan Informatika (tambahan)",
+        "field": "education",
+        "any_of": [
+          "Informatika"
+        ],
+        "required": false
+      }
+    ]
+  },
+  "results": [
+    {
+      "schema_version": "1.0",
+      "candidate_id": "C-0001",
+      "source": "cv.txt",
+      "processing_status": "success",
+      "facts": {
+        "skills": [
+          {
+            "name": "Python",
+            "quote": "Skills: Python, SQL."
+          }
+        ],
+        "education": [
+          {
+            "degree": "S1",
+            "field": "Informatika",
+            "institution": "Universitas Contoh",
+            "quote": "Pendidikan: S1 Informatika, Universitas Contoh."
+          }
+        ],
+        "experience": [
+          {
+            "role": "Developer",
+            "organization": "Perusahaan Contoh",
+            "period_raw": "2023-2024",
+            "description": null,
+            "quote": "Pengalaman: Developer di Perusahaan Contoh, 2023-2024."
+          }
+        ],
+        "projects": [
+          {
+            "name": "FAQ Assistant",
+            "description": "menggunakan API LLM",
+            "quote": "Proyek: FAQ Assistant menggunakan API LLM."
+          }
+        ]
+      },
+      "assessment": [
+        {
+          "criterion_id": "C1",
+          "label": "Python",
+          "required": true,
+          "status": "supported",
+          "evidence": [
+            "Skills: Python, SQL."
+          ],
+          "explanation": "Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi."
+        },
+        {
+          "criterion_id": "C2",
+          "label": "SQL",
+          "required": true,
+          "status": "not_evidenced",
+          "evidence": [],
+          "explanation": "Belum ada bukti pada hasil ekstraksi; bukan bukti kandidat tidak mampu."
+        },
+        {
+          "criterion_id": "C3",
+          "label": "Proyek integrasi API LLM",
+          "required": true,
+          "status": "supported",
+          "evidence": [
+            "Proyek: FAQ Assistant menggunakan API LLM."
+          ],
+          "explanation": "Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi."
+        },
+        {
+          "criterion_id": "C4",
+          "label": "Pendidikan Informatika (tambahan)",
+          "required": false,
+          "status": "supported",
+          "evidence": [
+            "Pendidikan: S1 Informatika, Universitas Contoh."
+          ],
+          "explanation": "Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi."
+        }
+      ],
+      "human_review_required": true,
+      "final_decision": null,
+      "errors": [],
+      "metadata": {
+        "author": "Arga Bona Simarmata",
+        "mode": "mock",
+        "model": null,
+        "job_title": "Junior AI Engineer — posisi sintetis",
+        "job_version": "1.0",
+        "source_sha256": "cae1d31d91e3d74e70c4892dca8139c2742e9102e885d09ccd6a952c3dc8b732",
+        "job_sha256": "cb82322bad4e4b11ee5508087778c958c2cf4b768ea50daee6aeda9fc1328deb",
+        "elapsed_seconds": 0.006
+      },
+      "recommendation": {
+        "status": "needs_clarification",
+        "summary": "Terdapat 1 skill, 1 pendidikan, 1 pengalaman, dan 1 proyek yang diekstrak. 3/4 kriteria memiliki bukti tertulis.",
+        "rationale": "Untuk posisi Junior AI Engineer — posisi sintetis, klarifikasi diperlukan pada: SQL.",
+        "caveats": [
+          "Isi CV adalah klaim, belum verifikasi kompetensi.",
+          "Informasi tidak ditemukan dapat disebabkan data tidak dicantumkan atau ekstraksi terlewat.",
+          "Pemeriksaan kutipan tidak membuktikan semua hubungan antarfield benar. Reviewer harus membandingkan sumber.",
+          "Deteksi manipulasi bersifat terbatas; hidden text PDF dan proxy bias belum diaudit.",
+          "Respons model disimulasikan; hasil ini menguji workflow, bukan akurasi LLM nyata."
+        ],
+        "follow_up_questions": [
+          "Dapatkah kandidat menunjukkan bukti untuk: SQL?"
+        ]
+      }
+    }
+  ]
+}

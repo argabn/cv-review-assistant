@@ -1,0 +1,227 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Candidate Review</title><style>:root{--ink:#203042;--muted:#5d6c7b;--line:#e1e7ed;--canvas:#f5f7fa;--accent:#176b62}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--canvas);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--accent)}button,input,select,textarea{font:inherit}h1,h2,h3,p{margin:0}h1{font-size:25px;line-height:1.3;font-weight:650;letter-spacing:-.5px}h2{font-size:21px}h3{font-size:14px;font-weight:650}small{display:block;font-size:11px;color:var(--muted);font-weight:400}.muted{color:var(--muted);font-size:12px}.helper{color:var(--muted);font-size:12px;margin-top:10px}.appbar{height:60px;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 28px}.brand{display:flex;align-items:center;gap:10px;font-weight:650;font-size:16px}.brand-mark{display:grid;place-items:center;background:var(--accent);color:#fff;border-radius:7px;width:29px;height:29px}.appbar-meta{color:var(--muted);font-size:12px}.workspace{display:grid;grid-template-columns:204px minmax(0,1fr);max-width:1680px;margin:auto}.sidebar{padding:26px 14px;border-right:1px solid var(--line);min-height:calc(100vh - 60px);background:#fafbfc}.eyebrow{font-size:10px;letter-spacing:1px;color:var(--muted);padding:0 12px 14px;font-weight:650}.eyebrow span{float:right}.sidebar a{display:block;text-decoration:none;padding:12px;border:1px solid var(--line);border-radius:7px;background:white;margin-bottom:8px;color:var(--ink)}.sidebar a:hover{border-color:var(--accent)}.sidebar a span{font-weight:600}.sidebar small{margin-top:4px}main{padding:26px 30px;min-width:0}.page-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.breadcrumb{font-size:12px;color:var(--muted);margin-bottom:10px}.page-heading h1{margin-bottom:6px}.button{white-space:nowrap;text-decoration:none;border:1px solid #cbd5de;padding:8px 13px;border-radius:6px;background:white;color:var(--ink);font-size:12px}article{background:white;border:1px solid var(--line);border-radius:10px;margin-bottom:24px;scroll-margin-top:20px;overflow:hidden}.candidate-header{padding:22px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:center}.identity{display:flex;align-items:center;gap:14px;min-width:0}.identity>div{min-width:0}.avatar{width:44px;height:44px;border-radius:50%;background:#edf3f5;color:#487177;display:grid;place-items:center;font-weight:650;flex-shrink:0}.filename{overflow-wrap:anywhere}.tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}.tag,.status,.signal{display:inline-block;border-radius:5px;padding:4px 8px;font-size:11px;font-weight:550}.tag{background:#f0f3f6;color:#526274}.ready,.positive{background:#eaf5ee;color:#216745}.clarify,.pending{background:#fff4db;color:#815d0d}.failed{background:#fceceb;color:#a13933}.candidate-layout{display:grid;grid-template-columns:minmax(0,1fr) 285px}.candidate-main{padding:24px;min-width:0}.review-panel{padding:24px 20px;border-left:1px solid var(--line);background:#fcfdfd}.recommendation{border-left:3px solid #377c73;background:#f5f9f8;padding:15px 17px;margin-bottom:25px}.recommendation p{margin-top:8px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px}.scorecard h3{margin-bottom:12px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px}th,td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid var(--line)}thead th{background:#f8fafb;color:var(--muted);font-size:10px;font-weight:600}tbody th{width:35%;font-weight:500}tbody th small{margin-top:4px}td:nth-child(2){white-space:nowrap}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;margin-top:24px}.fact-section{padding:0 0 18px;margin-bottom:12px;border-bottom:1px solid var(--line);min-width:0}.count{font-size:11px;font-weight:400;color:var(--muted);margin-left:5px}.records{list-style:none;margin:12px 0 0;padding:0}.records li+li{margin-top:18px}.records li>strong{font-size:13px;font-weight:600}.records p{margin-top:3px;font-size:12px}.empty{font-size:12px;color:var(--muted);padding-top:12px}details summary{cursor:pointer;color:var(--accent);font-size:12px;padding:6px 0}.evidence{margin-top:3px}blockquote{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;margin:6px 0 10px;padding:10px 12px;background:#f5f7f9;border-left:2px solid #c1d5d1;color:#4d5f70}.follow-up ul,.limits ul{padding-left:18px;font-size:12px}.follow-up li,.limits li{margin:7px 0}.limits{border-top:1px solid var(--line);padding-top:10px;margin-top:18px}.limits summary{color:var(--muted)}.review-panel>p{margin-top:6px}label{display:block;font-size:12px;font-weight:500;margin:16px 0 0}input:not([type=checkbox]),select,textarea{display:block;width:100%;border:1px solid #cbd5de;border-radius:5px;background:white;color:var(--ink);padding:9px;margin-top:6px;min-width:0}textarea{resize:vertical;font-size:12px}.check{display:flex;align-items:flex-start;gap:7px;font-size:11px}.check input{margin-top:2px}.primary{margin-top:20px;padding:10px;width:100%;border:0;border-radius:5px;background:var(--accent);color:white;font-weight:550;cursor:pointer}.primary:hover{background:#10554e}.feedback{font-size:12px;margin-top:10px}.corrections{margin-top:14px}fieldset{margin:10px 0;padding:10px;border:1px solid var(--line);border-radius:5px}legend{font-size:11px;color:var(--muted)}fieldset label{margin-top:8px}.review-history{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}.review-history p{margin:7px 0;font-size:12px}.error{background:#fff0ee;color:#91382d;padding:14px;margin-bottom:16px;overflow-wrap:anywhere}.technical{margin-top:12px}.technical>summary{color:var(--muted)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;border:1px solid var(--line);padding:16px;font-size:11px}footer{font-size:11px;color:#6b7c8b;padding:20px 0 4px;text-align:right}.skip{position:absolute;left:-10000px}.skip:focus{left:12px;top:12px;background:white;padding:12px;z-index:4}:focus-visible{outline:3px solid #2b8dba;outline-offset:3px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@media(max-width:1100px){.workspace{grid-template-columns:155px minmax(0,1fr)}main{padding:22px 18px}.candidate-layout{grid-template-columns:1fr}.review-panel{border-left:0;border-top:1px solid var(--line)}.candidate-header{align-items:flex-start}}@media(max-width:650px){.workspace{display:block}.sidebar{min-height:auto;border-right:0;border-bottom:1px solid var(--line);padding:12px;display:flex;gap:8px;overflow:auto}.sidebar .eyebrow{display:none}.sidebar a{min-width:145px;margin:0}.appbar{padding:0 16px}.appbar-meta{display:none}main{padding:18px 12px}h1{font-size:21px}.page-heading{align-items:flex-start}.candidate-header{padding:18px;display:block}.tags{justify-content:flex-start;margin-top:12px}.candidate-main{padding:18px}.profile-grid{grid-template-columns:1fr}.section-title{display:block}.section-title span{display:block;margin-top:5px}.button{padding:7px 9px}}@media print{body{background:white}.appbar,.sidebar,.review-panel,.technical,.button,.skip{display:none}.workspace,.candidate-layout{display:block}main{padding:0}.candidate-header{padding:14px}.candidate-main{padding:14px}article{overflow:visible}.evidence blockquote{display:block}a{color:inherit}h3{break-after:avoid}tr{break-inside:avoid}}
+</style></head><body><a class="skip" href="#main">Ke isi utama</a><header class="appbar"><span class="brand"><span class="brand-mark">C</span>Candidate Review</span><span class="appbar-meta">Penelaahan kandidat</span></header><div class="workspace"><nav class="sidebar" aria-label="Daftar kandidat"><p class="eyebrow">KANDIDAT <span>1</span></p><a href="#candidate-0"><span>C-0001</span><small>Siap ditinjau</small></a></nav><main id="main"><div class="page-heading"><div><p class="breadcrumb">Kandidat / Penelaahan</p><h1>Junior AI Engineer — posisi sintetis</h1><p class="muted">Kriteria versi 1.0</p></div><a class="button" href="results.json" download>Unduh hasil</a></div><article id="candidate-0"><div class="candidate-header"><div class="identity"><div class="avatar">01</div><div><h2>C-0001</h2><p class="muted filename">cv.txt</p></div></div><div class="tags"><span class="tag">Ekstraksi AI</span><span class="status ready">Siap ditinjau</span></div></div><div class="candidate-layout"><div class="candidate-main"><section class="recommendation"><div class="section-title"><h3>Rekomendasi penelaahan</h3><span class="muted">4/4 kriteria berbukti</span></div><p>Untuk posisi Junior AI Engineer — posisi sintetis, seluruh kriteria wajib memiliki bukti awal untuk ditinjau manusia.</p><p class="helper">Bukti CV belum memverifikasi kompetensi. Keputusan tetap pada reviewer.</p></section><section class="scorecard"><h3>Kriteria posisi</h3><div class="table-wrap"><table><caption class="sr-only">Bukti terhadap kriteria posisi</caption><thead><tr><th>Kriteria</th><th>Status</th><th>Sumber</th></tr></thead><tbody><tr><th scope="row">Python<small>Wajib</small></th><td><span class="signal positive">Ada bukti</span></td><td><details class="evidence"><summary>Bukti sumber</summary><blockquote>Kandidat sintetis DEMO-001
+Skills: Python, SQL.</blockquote></details></td></tr><tr><th scope="row">SQL<small>Wajib</small></th><td><span class="signal positive">Ada bukti</span></td><td><details class="evidence"><summary>Bukti sumber</summary><blockquote>Kandidat sintetis DEMO-001
+Skills: Python, SQL.</blockquote></details></td></tr><tr><th scope="row">Proyek integrasi API LLM<small>Wajib</small></th><td><span class="signal positive">Ada bukti</span></td><td><details class="evidence"><summary>Bukti sumber</summary><blockquote>Kandidat sintetis DEMO-001
+Skills: Python, SQL.
+Pendidikan: S1 Informatika, Universitas Contoh.
+Pengalaman: Developer di Perusahaan Contoh, 2023-2024.
+Proyek: FAQ Assistant menggunakan API LLM.</blockquote></details></td></tr><tr><th scope="row">Pendidikan Informatika (tambahan)<small>Tambahan</small></th><td><span class="signal positive">Ada bukti</span></td><td><details class="evidence"><summary>Bukti sumber</summary><blockquote>Pendidikan: S1 Informatika, Universitas Contoh.
+Pengalaman: Developer di Perusahaan Contoh, 2023-2024.</blockquote></details></td></tr></tbody></table></div></section><div class="profile-grid"><section class="fact-section"><h3>Pengalaman <span class="count">1</span></h3><ul class="records"><li><strong>Developer</strong><p class="muted">Perusahaan Contoh · 2023-2024</p><p>Developer di Perusahaan Contoh, 2023-2024.</p><details class="evidence"><summary>Bukti sumber</summary><blockquote>Kandidat sintetis DEMO-001
+Skills: Python, SQL.
+Pendidikan: S1 Informatika, Universitas Contoh.
+Pengalaman: Developer di Perusahaan Contoh, 2023-2024.
+Proyek: FAQ Assistant menggunakan API LLM.</blockquote></details></li></ul></section><section class="fact-section"><h3>Proyek <span class="count">1</span></h3><ul class="records"><li><strong>FAQ Assistant menggunakan API LLM</strong><p>Proyek: FAQ Assistant menggunakan API LLM.</p><details class="evidence"><summary>Bukti sumber</summary><blockquote>Kandidat sintetis DEMO-001
+Skills: Python, SQL.
+Pendidikan: S1 Informatika, Universitas Contoh.
+Pengalaman: Developer di Perusahaan Contoh, 2023-2024.
+Proyek: FAQ Assistant menggunakan API LLM.</blockquote></details></li></ul></section><section class="fact-section"><h3>Pendidikan <span class="count">1</span></h3><ul class="records"><li><strong>S1 Informatika</strong><p class="muted">Universitas Contoh · Informatika</p><details class="evidence"><summary>Bukti sumber</summary><blockquote>Pendidikan: S1 Informatika, Universitas Contoh.
+Pengalaman: Developer di Perusahaan Contoh, 2023-2024.</blockquote></details></li></ul></section><section class="fact-section"><h3>Keahlian <span class="count">2</span></h3><ul class="records"><li><strong>Python</strong><details class="evidence"><summary>Bukti sumber</summary><blockquote>Kandidat sintetis DEMO-001
+Skills: Python, SQL.</blockquote></details></li><li><strong>SQL</strong><details class="evidence"><summary>Bukti sumber</summary><blockquote>Kandidat sintetis DEMO-001
+Skills: Python, SQL.</blockquote></details></li></ul></section></div><section class="follow-up"><h3>Pertanyaan lanjutan</h3><ul><li>Verifikasi kontribusi pribadi dan kualitas hasil melalui wawancara atau demonstrasi.</li></ul></section><details class="limits"><summary>Ketidakpastian dan batas penilaian</summary><ul><li>Isi CV adalah klaim, belum verifikasi kompetensi.</li><li>Informasi tidak ditemukan dapat disebabkan data tidak dicantumkan atau ekstraksi terlewat.</li><li>Pemeriksaan kutipan tidak membuktikan semua hubungan antarfield benar. Reviewer harus membandingkan sumber.</li><li>Deteksi manipulasi bersifat terbatas; hidden text PDF dan proxy bias belum diaudit.</li></ul></details></div><aside class="review-panel"><h3>Catatan reviewer</h3><p class="muted">Periksa bukti sebelum menentukan tindak lanjut.</p><form data-candidate="C-0001"><label>Reviewer<input name="reviewer" autocomplete="name" required></label><label>Tindak lanjut<select name="action"><option value="reviewed">Sudah ditinjau</option><option value="request_clarification">Minta klarifikasi</option></select></label><label>Catatan<textarea name="notes" rows="4" placeholder="Temuan, hal yang perlu diverifikasi, atau pertanyaan lanjutan" required></textarea></label><label class="check"><input type="checkbox" name="correct"> Koreksi informasi kandidat</label><div class="corrections" hidden><details data-field="skills"><summary>Keahlian</summary><fieldset data-record><legend>Keahlian</legend><label>Nama<textarea data-key="name" rows="1">Python</textarea></label><label>Kutipan sumber<textarea data-key="quote" rows="3">Kandidat sintetis DEMO-001
+Skills: Python, SQL.</textarea></label><label class="check"><input type="checkbox" data-remove> Hapus entri ini</label></fieldset><fieldset data-record><legend>Keahlian</legend><label>Nama<textarea data-key="name" rows="1">SQL</textarea></label><label>Kutipan sumber<textarea data-key="quote" rows="3">Kandidat sintetis DEMO-001
+Skills: Python, SQL.</textarea></label><label class="check"><input type="checkbox" data-remove> Hapus entri ini</label></fieldset><fieldset data-record data-new><legend>Tambah entri</legend><label>Nama<textarea data-key="name" rows="1"></textarea></label><label>Kutipan sumber<textarea data-key="quote" rows="3"></textarea></label></fieldset></details><details data-field="education"><summary>Pendidikan</summary><fieldset data-record><legend>Pendidikan</legend><label>Gelar<textarea data-key="degree" rows="1">S1 Informatika</textarea></label><label>Bidang<textarea data-key="field" rows="1">Informatika</textarea></label><label>Institusi<textarea data-key="institution" rows="1">Universitas Contoh</textarea></label><label>Kutipan sumber<textarea data-key="quote" rows="3">Pendidikan: S1 Informatika, Universitas Contoh.
+Pengalaman: Developer di Perusahaan Contoh, 2023-2024.</textarea></label><label class="check"><input type="checkbox" data-remove> Hapus entri ini</label></fieldset><fieldset data-record data-new><legend>Tambah entri</legend><label>Gelar<textarea data-key="degree" rows="1"></textarea></label><label>Bidang<textarea data-key="field" rows="1"></textarea></label><label>Institusi<textarea data-key="institution" rows="1"></textarea></label><label>Kutipan sumber<textarea data-key="quote" rows="3"></textarea></label></fieldset></details><details data-field="experience"><summary>Pengalaman</summary><fieldset data-record><legend>Pengalaman</legend><label>Jabatan<textarea data-key="role" rows="1">Developer</textarea></label><label>Organisasi<textarea data-key="organization" rows="1">Perusahaan Contoh</textarea></label><label>Periode<textarea data-key="period_raw" rows="1">2023-2024</textarea></label><label>Deskripsi<textarea data-key="description" rows="1">Developer di Perusahaan Contoh, 2023-2024.</textarea></label><label>Kutipan sumber<textarea data-key="quote" rows="3">Kandidat sintetis DEMO-001
+Skills: Python, SQL.
+Pendidikan: S1 Informatika, Universitas Contoh.
+Pengalaman: Developer di Perusahaan Contoh, 2023-2024.
+Proyek: FAQ Assistant menggunakan API LLM.</textarea></label><label class="check"><input type="checkbox" data-remove> Hapus entri ini</label></fieldset><fieldset data-record data-new><legend>Tambah entri</legend><label>Jabatan<textarea data-key="role" rows="1"></textarea></label><label>Organisasi<textarea data-key="organization" rows="1"></textarea></label><label>Periode<textarea data-key="period_raw" rows="1"></textarea></label><label>Deskripsi<textarea data-key="description" rows="1"></textarea></label><label>Kutipan sumber<textarea data-key="quote" rows="3"></textarea></label></fieldset></details><details data-field="projects"><summary>Proyek</summary><fieldset data-record><legend>Proyek</legend><label>Nama<textarea data-key="name" rows="1">FAQ Assistant menggunakan API LLM</textarea></label><label>Deskripsi<textarea data-key="description" rows="1">Proyek: FAQ Assistant menggunakan API LLM.</textarea></label><label>Kutipan sumber<textarea data-key="quote" rows="3">Kandidat sintetis DEMO-001
+Skills: Python, SQL.
+Pendidikan: S1 Informatika, Universitas Contoh.
+Pengalaman: Developer di Perusahaan Contoh, 2023-2024.
+Proyek: FAQ Assistant menggunakan API LLM.</textarea></label><label class="check"><input type="checkbox" data-remove> Hapus entri ini</label></fieldset><fieldset data-record data-new><legend>Tambah entri</legend><label>Nama<textarea data-key="name" rows="1"></textarea></label><label>Deskripsi<textarea data-key="description" rows="1"></textarea></label><label>Kutipan sumber<textarea data-key="quote" rows="3"></textarea></label></fieldset></details></div><button type="submit" class="primary">Ekspor review</button><p class="helper">Koreksi diterapkan setelah file review divalidasi oleh aplikasi.</p><p class="feedback" role="status" aria-live="polite"></p></form></aside></div></article><details class="technical"><summary>Data terstruktur</summary><pre>{
+  &quot;author&quot;: &quot;Arga Bona Simarmata&quot;,
+  &quot;job&quot;: {
+    &quot;title&quot;: &quot;Junior AI Engineer — posisi sintetis&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;criteria&quot;: [
+      {
+        &quot;id&quot;: &quot;C1&quot;,
+        &quot;label&quot;: &quot;Python&quot;,
+        &quot;field&quot;: &quot;skills&quot;,
+        &quot;any_of&quot;: [
+          &quot;Python&quot;
+        ],
+        &quot;required&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;C2&quot;,
+        &quot;label&quot;: &quot;SQL&quot;,
+        &quot;field&quot;: &quot;skills&quot;,
+        &quot;any_of&quot;: [
+          &quot;SQL&quot;
+        ],
+        &quot;required&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;C3&quot;,
+        &quot;label&quot;: &quot;Proyek integrasi API LLM&quot;,
+        &quot;field&quot;: &quot;projects&quot;,
+        &quot;any_of&quot;: [
+          &quot;API LLM&quot;
+        ],
+        &quot;required&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;C4&quot;,
+        &quot;label&quot;: &quot;Pendidikan Informatika (tambahan)&quot;,
+        &quot;field&quot;: &quot;education&quot;,
+        &quot;any_of&quot;: [
+          &quot;Informatika&quot;
+        ],
+        &quot;required&quot;: false
+      }
+    ]
+  },
+  &quot;results&quot;: [
+    {
+      &quot;schema_version&quot;: &quot;1.0&quot;,
+      &quot;candidate_id&quot;: &quot;C-0001&quot;,
+      &quot;source&quot;: &quot;cv.txt&quot;,
+      &quot;processing_status&quot;: &quot;success&quot;,
+      &quot;facts&quot;: {
+        &quot;skills&quot;: [
+          {
+            &quot;name&quot;: &quot;Python&quot;,
+            &quot;quote&quot;: &quot;Kandidat sintetis DEMO-001\nSkills: Python, SQL.&quot;
+          },
+          {
+            &quot;name&quot;: &quot;SQL&quot;,
+            &quot;quote&quot;: &quot;Kandidat sintetis DEMO-001\nSkills: Python, SQL.&quot;
+          }
+        ],
+        &quot;education&quot;: [
+          {
+            &quot;degree&quot;: &quot;S1 Informatika&quot;,
+            &quot;field&quot;: &quot;Informatika&quot;,
+            &quot;institution&quot;: &quot;Universitas Contoh&quot;,
+            &quot;quote&quot;: &quot;Pendidikan: S1 Informatika, Universitas Contoh.\nPengalaman: Developer di Perusahaan Contoh, 2023-2024.&quot;
+          }
+        ],
+        &quot;experience&quot;: [
+          {
+            &quot;role&quot;: &quot;Developer&quot;,
+            &quot;organization&quot;: &quot;Perusahaan Contoh&quot;,
+            &quot;period_raw&quot;: &quot;2023-2024&quot;,
+            &quot;description&quot;: &quot;Developer di Perusahaan Contoh, 2023-2024.&quot;,
+            &quot;quote&quot;: &quot;Kandidat sintetis DEMO-001\nSkills: Python, SQL.\nPendidikan: S1 Informatika, Universitas Contoh.\nPengalaman: Developer di Perusahaan Contoh, 2023-2024.\nProyek: FAQ Assistant menggunakan API LLM.&quot;
+          }
+        ],
+        &quot;projects&quot;: [
+          {
+            &quot;name&quot;: &quot;FAQ Assistant menggunakan API LLM&quot;,
+            &quot;description&quot;: &quot;Proyek: FAQ Assistant menggunakan API LLM.&quot;,
+            &quot;quote&quot;: &quot;Kandidat sintetis DEMO-001\nSkills: Python, SQL.\nPendidikan: S1 Informatika, Universitas Contoh.\nPengalaman: Developer di Perusahaan Contoh, 2023-2024.\nProyek: FAQ Assistant menggunakan API LLM.&quot;
+          }
+        ]
+      },
+      &quot;assessment&quot;: [
+        {
+          &quot;criterion_id&quot;: &quot;C1&quot;,
+          &quot;label&quot;: &quot;Python&quot;,
+          &quot;required&quot;: true,
+          &quot;status&quot;: &quot;supported&quot;,
+          &quot;evidence&quot;: [
+            &quot;Kandidat sintetis DEMO-001\nSkills: Python, SQL.&quot;
+          ],
+          &quot;explanation&quot;: &quot;Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi.&quot;
+        },
+        {
+          &quot;criterion_id&quot;: &quot;C2&quot;,
+          &quot;label&quot;: &quot;SQL&quot;,
+          &quot;required&quot;: true,
+          &quot;status&quot;: &quot;supported&quot;,
+          &quot;evidence&quot;: [
+            &quot;Kandidat sintetis DEMO-001\nSkills: Python, SQL.&quot;
+          ],
+          &quot;explanation&quot;: &quot;Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi.&quot;
+        },
+        {
+          &quot;criterion_id&quot;: &quot;C3&quot;,
+          &quot;label&quot;: &quot;Proyek integrasi API LLM&quot;,
+          &quot;required&quot;: true,
+          &quot;status&quot;: &quot;supported&quot;,
+          &quot;evidence&quot;: [
+            &quot;Kandidat sintetis DEMO-001\nSkills: Python, SQL.\nPendidikan: S1 Informatika, Universitas Contoh.\nPengalaman: Developer di Perusahaan Contoh, 2023-2024.\nProyek: FAQ Assistant menggunakan API LLM.&quot;
+          ],
+          &quot;explanation&quot;: &quot;Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi.&quot;
+        },
+        {
+          &quot;criterion_id&quot;: &quot;C4&quot;,
+          &quot;label&quot;: &quot;Pendidikan Informatika (tambahan)&quot;,
+          &quot;required&quot;: false,
+          &quot;status&quot;: &quot;supported&quot;,
+          &quot;evidence&quot;: [
+            &quot;Pendidikan: S1 Informatika, Universitas Contoh.\nPengalaman: Developer di Perusahaan Contoh, 2023-2024.&quot;
+          ],
+          &quot;explanation&quot;: &quot;Ada klaim eksplisit beserta bukti CV; kompetensi belum diverifikasi.&quot;
+        }
+      ],
+      &quot;human_review_required&quot;: true,
+      &quot;final_decision&quot;: null,
+      &quot;errors&quot;: [],
+      &quot;metadata&quot;: {
+        &quot;author&quot;: &quot;Arga Bona Simarmata&quot;,
+        &quot;mode&quot;: &quot;ollama&quot;,
+        &quot;model&quot;: &quot;qwen2.5:1.5b&quot;,
+        &quot;job_title&quot;: &quot;Junior AI Engineer — posisi sintetis&quot;,
+        &quot;job_version&quot;: &quot;1.0&quot;,
+        &quot;source_sha256&quot;: &quot;cae1d31d91e3d74e70c4892dca8139c2742e9102e885d09ccd6a952c3dc8b732&quot;,
+        &quot;job_sha256&quot;: &quot;cb82322bad4e4b11ee5508087778c958c2cf4b768ea50daee6aeda9fc1328deb&quot;,
+        &quot;elapsed_seconds&quot;: 3.959
+      },
+      &quot;recommendation&quot;: {
+        &quot;status&quot;: &quot;ready_for_review&quot;,
+        &quot;summary&quot;: &quot;Terdapat 2 skill, 1 pendidikan, 1 pengalaman, dan 1 proyek yang diekstrak. 4/4 kriteria memiliki bukti tertulis.&quot;,
+        &quot;rationale&quot;: &quot;Untuk posisi Junior AI Engineer — posisi sintetis, seluruh kriteria wajib memiliki bukti awal untuk ditinjau manusia.&quot;,
+        &quot;caveats&quot;: [
+          &quot;Isi CV adalah klaim, belum verifikasi kompetensi.&quot;,
+          &quot;Informasi tidak ditemukan dapat disebabkan data tidak dicantumkan atau ekstraksi terlewat.&quot;,
+          &quot;Pemeriksaan kutipan tidak membuktikan semua hubungan antarfield benar. Reviewer harus membandingkan sumber.&quot;,
+          &quot;Deteksi manipulasi bersifat terbatas; hidden text PDF dan proxy bias belum diaudit.&quot;
+        ],
+        &quot;follow_up_questions&quot;: [
+          &quot;Verifikasi kontribusi pribadi dan kualitas hasil melalui wawancara atau demonstrasi.&quot;
+        ]
+      }
+    }
+  ]
+}</pre></details><footer>Arga Bona Simarmata</footer></main></div><script>document.querySelectorAll('form').forEach(form => {
+  const corrections = form.querySelector('.corrections');
+  form.elements.correct.addEventListener('change', () => {
+    corrections.hidden = !form.elements.correct.checked;
+  });
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const feedback = form.querySelector('.feedback');
+    try {
+      const reviewer = form.elements.reviewer.value.trim();
+      const notes = form.elements.notes.value.trim();
+      if (!reviewer || !notes) throw Error('Isi nama reviewer dan catatan.');
+      let corrected = null;
+      if (form.elements.correct.checked) {
+        corrected = {};
+        form.querySelectorAll('[data-field]').forEach(group => {
+          corrected[group.dataset.field] = [];
+          group.querySelectorAll('[data-record]').forEach(record => {
+            if (record.querySelector('[data-remove]')?.checked) return;
+            const values = {};
+            record.querySelectorAll('[data-key]').forEach(input => {
+              values[input.dataset.key] = input.value.trim() || null;
+            });
+            if (record.hasAttribute('data-new') && Object.values(values).every(value => value === null)) return;
+            if (!values.quote) throw Error('Setiap entri harus memiliki kutipan persis dari CV.');
+            if (!Object.entries(values).some(([key,value]) => key !== 'quote' && value !== null)) throw Error('Entri fakta tidak boleh kosong.');
+            corrected[group.dataset.field].push(values);
+          });
+        });
+      }
+      const payload = {reviewer, candidate_id:form.dataset.candidate, action:form.elements.action.value, notes, corrected_facts:corrected};
+      const url = URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)], {type:'application/json'}));
+      const link = document.createElement('a');
+      link.href = url; link.download = 'review_'+form.dataset.candidate+'.json'; link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      feedback.textContent = 'Review diunduh. Terapkan melalui aplikasi untuk memvalidasi koreksi.';
+    } catch (error) { feedback.textContent = error.message; }
+  });
+});
+</script></body></html>

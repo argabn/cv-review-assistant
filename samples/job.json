@@ -1,0 +1,42 @@
+{
+  "title": "Junior AI Engineer — posisi sintetis",
+  "version": "1.0",
+  "criteria": [
+    {
+      "id": "C1",
+      "label": "Python",
+      "field": "skills",
+      "any_of": [
+        "Python"
+      ],
+      "required": true
+    },
+    {
+      "id": "C2",
+      "label": "SQL",
+      "field": "skills",
+      "any_of": [
+        "SQL"
+      ],
+      "required": true
+    },
+    {
+      "id": "C3",
+      "label": "Proyek integrasi API LLM",
+      "field": "projects",
+      "any_of": [
+        "API LLM"
+      ],
+      "required": true
+    },
+    {
+      "id": "C4",
+      "label": "Pendidikan Informatika (tambahan)",
+      "field": "education",
+      "any_of": [
+        "Informatika"
+      ],
+      "required": false
+    }
+  ]
+}
