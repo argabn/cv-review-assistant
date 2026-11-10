@@ -1,6 +1,6 @@
 # Contributing
 
-`main` contains integrated work. Use one short-lived branch and one pull request
+`main` contains integrated work. Use one dedicated branch and one pull request
 for each feature, fix, or maintenance task. Split unrelated changes into separate
 pull requests; keep the implementation, tests, and documentation for the same
 change together.
@@ -25,9 +25,14 @@ do not keep empty branches for future features.
 4. Open a pull request targeting `main`. Describe the behavior changed, validation,
    and any remaining limitations.
 5. Review the diff and wait for both Python CI jobs to pass before merging.
-6. Merge the pull request. GitHub automatically deletes its completed branch.
-7. Return to `main`, pull the merged changes, then remove the local branch with
-   `git branch -d <branch>` and refresh remote references with `git fetch --prune`.
+6. Merge the pull request and retain its branch at the final reviewed commit.
+   Automatic branch deletion is disabled so completed work remains visible.
+7. Return to `main` and pull the merged changes. Keep completed branches as
+   historical references; start subsequent work on a new branch from `main`.
+
+A retained branch may appear behind `main` after merging. This is expected:
+it records the completed change, while `main` contains all integrated changes.
+Use the linked pull request and commits to see what was changed and when.
 
 CI runs for pull requests targeting `main` and again after changes land on
 `main`. This avoids running the same checks twice for each feature-branch push.
