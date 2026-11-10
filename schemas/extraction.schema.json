@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "name",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "degree": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "field": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "institution": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "degree",
+          "field",
+          "institution",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "organization": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "period_raw": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "role",
+          "organization",
+          "period_raw",
+          "description",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "skills",
+    "education",
+    "experience",
+    "projects"
+  ],
+  "additionalProperties": false
+}

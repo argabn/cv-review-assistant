@@ -1,0 +1,5 @@
+Kandidat sintetis DEMO-001
+Skills: Python, SQL.
+Pendidikan: S1 Informatika, Universitas Contoh.
+Pengalaman: Developer di Perusahaan Contoh, 2023-2024.
+Proyek: FAQ Assistant menggunakan API LLM.
