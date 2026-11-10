@@ -1,0 +1,95 @@
+{
+  "mode": "mock",
+  "case_count": 9,
+  "passed": 9,
+  "cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "expected_status": "ready_for_review",
+      "actual_status": "ready_for_review",
+      "extraction_metrics": {
+        "correct_records": 5,
+        "wrong_or_extra_records": 0,
+        "missed_records": 0,
+        "correct_empty_sections": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "case": "missing",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "extraction_metrics": {
+        "correct_records": 1,
+        "wrong_or_extra_records": 0,
+        "missed_records": 0,
+        "correct_empty_sections": 3,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "case": "omission",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "extraction_metrics": {
+        "correct_records": 4,
+        "wrong_or_extra_records": 0,
+        "missed_records": 1,
+        "correct_empty_sections": 0,
+        "precision": 1.0,
+        "recall": 0.8
+      }
+    },
+    {
+      "case": "injection",
+      "passed": true,
+      "expected_status": "unable_to_assess",
+      "actual_status": "unable_to_assess",
+      "extraction_metrics": null
+    },
+    {
+      "case": "empty",
+      "passed": true,
+      "expected_status": "unable_to_assess",
+      "actual_status": "unable_to_assess",
+      "extraction_metrics": null
+    },
+    {
+      "case": "invalid_response",
+      "passed": true,
+      "expected_status": "unable_to_assess",
+      "actual_status": "unable_to_assess",
+      "extraction_metrics": null
+    },
+    {
+      "case": "fabricated_evidence",
+      "passed": true,
+      "expected_status": "unable_to_assess",
+      "actual_status": "unable_to_assess",
+      "extraction_metrics": null
+    },
+    {
+      "case": "missing_job",
+      "passed": true,
+      "expected_status": "unable_to_assess",
+      "actual_status": "unable_to_assess",
+      "extraction_metrics": null
+    },
+    {
+      "case": "synthetic_identity_pair",
+      "passed": true,
+      "scope": "Mock invariance only; not a fairness audit of a model"
+    }
+  ],
+  "limitations": [
+    "Fixture responses are prepared; this does not estimate real LLM accuracy.",
+    "Gold labels are manually authored synthetic examples, not an independent representative benchmark.",
+    "Record-level exact comparison is conservative and sensitive to paraphrase.",
+    "Omission case intentionally has imperfect recall; passing means the gap was handled correctly."
+  ]
+}
