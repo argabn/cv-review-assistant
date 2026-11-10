@@ -130,7 +130,7 @@ Current verification:
 - Nine synthetic workflow scenarios passed.
 - The deliberate omission case has recall **0.8**, despite passing its expected behavior check.
 - One genuine local-model synthetic smoke test completed, with exact-record precision/recall **0.4**; formatting and field segmentation still require review.
-- A limited three-document real-data check completed **1/3** documents; an unsupported date and a context-budget failure blocked the others. The data and raw responses are not included here.
+- A limited check of three public resume examples from [Kaggle](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset) completed **1/3** documents; an unsupported date and a context-budget failure blocked the others. These external examples are not verified as fully synthetic. The documents and raw responses are not included here.
 
 Test passing is not model accuracy. See [verification](docs/verification.md) and the [mock evaluation report](examples/evaluation/REPORT.md) for results and limitations.
 

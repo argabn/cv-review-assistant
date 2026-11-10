@@ -33,6 +33,8 @@ Dependency-free JavaScript behavior test passed: structured correction add/remov
 
 ## Limited dataset validation
 
-A subsequent, local validation used three purposefully selected IT resumes from a user-provided PDF archive. One document completed extraction; one was blocked because the model generated unsupported employment dates; another was blocked by the input-context budget after an unrecognized section heading. This is operational success on 1/3 selected documents, not a population accuracy estimate. The sample was small, not random, and included a document used during earlier debugging.
+A subsequent, local validation used three purposefully selected IT resume examples from an archive the user identified as [Snehaan Bhawal's Resume Dataset on Kaggle](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset). The publisher describes examples collected from LiveCareer. Kaggle metadata marks the dataset public with a CC0 license; it does not establish that all documents are synthetic or fully anonymized. The local archive was not exhaustively matched against the published version.
 
-The original CVs, extracted text, model responses, and candidate identifiers from that test are excluded from this public repository. No hidden change or successful-only selection was applied to these results. The date extraction and context/heading handling remain known limitations.
+One document completed extraction; one was blocked because the model generated unsupported employment dates; another was blocked by the input-context budget after an unrecognized section heading. This is operational success on 1/3 selected documents, not a population accuracy estimate. The sample was small, not random, and included a document used during earlier debugging.
+
+The external dataset documents, extracted text, model responses, and document identifiers from that test are excluded from this repository. The included demo and evaluation fixtures are independently authored synthetic examples. No hidden change or successful-only selection was applied to these results. The date extraction and context/heading handling remain known limitations.
