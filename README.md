@@ -149,6 +149,7 @@ Only synthetic samples and reports are committed. Generated outputs, archives, P
 
 ## Documentation
 
+- [Contribution and branch workflow](CONTRIBUTING.md)
 - [Architecture and trade-offs](docs/architecture.md)
 - [Requirements and interface review](docs/requirements-review.md)
 - [Demo walkthrough](docs/demo-guide.md)
